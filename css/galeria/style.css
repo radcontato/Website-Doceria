@@ -1,0 +1,115 @@
+
+
+
+
+.tiles-wrap {
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+}
+.tiles-wrap li {
+  display: block;
+  opacity: 0;
+  text-align: center;
+  list-style-type: none;
+  float: left;
+  cursor: pointer;
+  width: 300px;
+  padding: 0;
+  border: 0px solid #dedede;
+  border-radius: 0px;
+  overflow: hidden;
+}
+.tiles-wrap li a {
+  overflow: hidden;
+  background: #00f;
+  text-decoration: none;
+}
+.tiles-wrap li a > div {
+  opacity: 0;
+  position: absolute;
+  background: linear-gradient(135deg, white 0%, white 100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.tiles-wrap li a > div > div {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  padding: 20px;
+  z-index: 3;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.tiles-wrap li a > div > div span {
+  display: block;
+}
+.tiles-wrap li a > div > div span:first-child {
+  font: normal 12px/1.4em Raleway, Arial;
+  color: #181818;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.tiles-wrap li a > div > div span:last-child {
+  font: bold 10px/1.2em Raleway, Arial;
+  color: #181818;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.tiles-wrap li a:hover > div {
+  opacity: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.tiles-wrap li a:hover > div > div {
+  opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tiles-wrap li.wookmark-inactive {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+.tiles-wrap li:hover {
+  background-color: #EEE;
+}
+.tiles-wrap.wookmark-initialised li {
+  opacity: 1;
+}
+.tiles-wrap.wookmark-initialised.animated li {
+  transition: all 0.3s ease-in-out;
+}
+.tiles-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tiles-wrap.grande li {
+  width: 360px;
+}
+
+.tile-loading:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ddd;
+  content: "Loading\2026";
+  padding-top: 20px;
+  color: #999;
+}
